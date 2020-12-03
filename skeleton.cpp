@@ -5,7 +5,7 @@
 #define INF (int)1e9
 #define cBits(x) __builtin_popcount(x)
 #define gcd(a,b) __gcd((a),(b))
-#define lcm(a,b) a/gcd(a,b)*b
+#define lcm(a,b) a/gcd(a,b)*(b)
 #define FOR(i,a,b) for (int i=a;i<b;i++)
 #define FORr(i,a,b) for (int i=a;i>=b;i--)
 #define MAX3(a,b,c) max(a,max(b,c))
@@ -23,24 +23,24 @@ const int MOD=1000000007;
 // solve(): solves an individual test case
 void solve() {
 
-	
+    
 
 }
 
 int main() {
 
-	// fastio;
-	// #ifndef ONLINE_JUDGE
-	// 	freopen("input.txt", "r", stdin);
-	// 	freopen("output.txt", "w", stdout);
-	// #endif
+    // fastio;
+    // #ifndef ONLINE_JUDGE
+    // 	freopen("input.txt", "r", stdin);
+    // 	freopen("output.txt", "w", stdout);
+    // #endif
 
-	int t = 1;
-	// multiple test cases:
-	// cin >> t;
-	while(t--) {
-		solve();
-	}
+    int t = 1;
+    // multiple test cases:
+    // cin >> t;
+    while(t--) {
+        solve();
+    }
 
 	return 0;
 }
