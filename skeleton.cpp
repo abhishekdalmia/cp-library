@@ -20,6 +20,14 @@ typedef pair<int,int> PII;
 
 const int MOD=1000000007;
 
+template <typename T>
+void pvec(const vector<T>& arr) {
+    for (auto elem:arr) {
+        cout << elem << " ";
+    }
+    cout << "\n";
+}
+
 // solve(): solves an individual test case
 void solve() {
 
