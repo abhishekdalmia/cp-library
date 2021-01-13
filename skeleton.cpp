@@ -28,6 +28,12 @@ void pvec(const vector<T>& arr) {
     cout << "\n";
 }
 
+template <typename T>
+void clear(queue<T> &q) {
+   queue<T> empty;
+   swap( q, empty );
+}
+
 // solve(): solves an individual test case
 void solve() {
 
