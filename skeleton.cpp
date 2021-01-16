@@ -29,7 +29,7 @@ void pvec(const vector<T>& arr) {
 }
 
 template <typename T>
-void clear(queue<T> &q) {
+void clearq(queue<T> &q) {
    queue<T> empty;
    swap( q, empty );
 }
