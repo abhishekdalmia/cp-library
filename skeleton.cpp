@@ -3,7 +3,7 @@
 #define pb push_back
 #define mp make_pair
 #define INF (int)1e9
-#define cBits(x) __builtin_popcount(x)
+#define cBits(x) __builtin_popcountll((ll)x)
 #define gcd(a,b) __gcd((a),(b))
 #define lcm(a,b) a/gcd(a,b)*(b)
 #define FOR(i,a,b) for (int i=a;i<b;i++)
@@ -13,9 +13,9 @@
 
 using namespace std;
 
-typedef long long int ll;
-typedef unsigned long long int ull;
-typedef pair<ll,ll> PLL;
+typedef long long ll;
+typedef unsigned long long ull;
+typedef pair<long long, long long> PLL;
 typedef pair<int,int> PII;
 
 const int MOD=1000000007;
