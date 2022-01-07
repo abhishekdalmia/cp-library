@@ -9,9 +9,9 @@ struct TreeNode {
 };
 
 void printTree(TreeNode* root) {
-    queue <TreeNode*> q;
+    queue<TreeNode*> q;
     q.push(root);
-    while(!q.empty()) {
+    while (!q.empty()) {
         TreeNode* ptr = q.front();
         q.pop();
         if (ptr != nullptr) {
@@ -31,12 +31,12 @@ TreeNode* newNode() {
     return ptr;
 }
 
-TreeNode* constructTree(vector <int>& arr) {
+TreeNode* constructTree(vector<int>& arr) {
     if (arr.size() == 0) {
         return nullptr;
     }
-    queue <TreeNode*> treeNodeQueue;
-    queue <int> integerQueue;
+    queue<TreeNode*> treeNodeQueue;
+    queue<int> integerQueue;
     int n = arr.size();
     for (int i = 1; i < n; i++) {
         integerQueue.push(arr[i]);
@@ -44,7 +44,7 @@ TreeNode* constructTree(vector <int>& arr) {
     TreeNode* root = newNode();
     root->val = arr[0];
     treeNodeQueue.push(root);
-    while(!integerQueue.empty()) {
+    while (!integerQueue.empty()) {
         int lval = -1;
         if (!integerQueue.empty()) {
             lval = integerQueue.front();
@@ -75,8 +75,9 @@ TreeNode* constructTree(vector <int>& arr) {
 
 int main() {
     // for now, -1 represents -1 node, can change as needed
-    vector <int> arr{3,9,20,-1,-1,15,7};
+    vector<int> arr{3, 9, 20, -1, -1, 15, 7};
     TreeNode* root;
     root = constructTree(arr);
     printTree(root);
+    return 0;
 }
