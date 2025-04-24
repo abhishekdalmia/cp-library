@@ -2,19 +2,23 @@
 
 using namespace std;
 
-struct TreeNode {
+struct TreeNode 
+{
     int val;
     TreeNode* left;
     TreeNode* right;
 };
 
-void printTree(TreeNode* root) {
+void printTree(TreeNode* root) 
+{
     queue<TreeNode*> q;
     q.push(root);
-    while (!q.empty()) {
+    while (!q.empty()) 
+    {
         TreeNode* ptr = q.front();
         q.pop();
-        if (ptr != nullptr) {
+        if (ptr != nullptr) 
+        {
             cout << ptr->val << ", ";
             q.push(ptr->left);
             q.push(ptr->right);
@@ -23,7 +27,8 @@ void printTree(TreeNode* root) {
     cout << "\n";
 }
 
-TreeNode* newNode() {
+TreeNode* newNode() 
+{
     TreeNode* ptr = new TreeNode();
     ptr->val = -1;
     ptr->left = nullptr;
@@ -31,39 +36,47 @@ TreeNode* newNode() {
     return ptr;
 }
 
-TreeNode* constructTree(vector<int>& arr) {
-    if (arr.size() == 0) {
+TreeNode* constructTree(vector<int>& arr) 
+{
+    if (arr.size() == 0) 
+    {
         return nullptr;
     }
     queue<TreeNode*> treeNodeQueue;
     queue<int> integerQueue;
     int n = arr.size();
-    for (int i = 1; i < n; i++) {
+    for (int i = 1; i < n; i++) 
+    {
         integerQueue.push(arr[i]);
     }
     TreeNode* root = newNode();
     root->val = arr[0];
     treeNodeQueue.push(root);
-    while (!integerQueue.empty()) {
+    while (!integerQueue.empty()) 
+    {
         int lval = -1;
-        if (!integerQueue.empty()) {
+        if (!integerQueue.empty()) 
+        {
             lval = integerQueue.front();
             integerQueue.pop();
         }
         int rval = -1;
-        if (!integerQueue.empty()) {
+        if (!integerQueue.empty()) 
+        {
             rval = integerQueue.front();
             integerQueue.pop();
         }
         TreeNode* ptr = treeNodeQueue.front();
         treeNodeQueue.pop();
-        if (lval != -1) {
+        if (lval != -1) 
+        {
             TreeNode* left = newNode();
             left->val = lval;
             ptr->left = left;
             treeNodeQueue.push(left);
         }
-        if (rval != -1) {
+        if (rval != -1) 
+        {
             TreeNode* right = newNode();
             right->val = rval;
             ptr->right = right;
@@ -73,7 +86,8 @@ TreeNode* constructTree(vector<int>& arr) {
     return root;
 }
 
-int main() {
+int main() 
+{
     // for now, -1 represents -1 node, can change as needed
     vector<int> arr{3, 9, 20, -1, -1, 15, 7};
     TreeNode* root;
