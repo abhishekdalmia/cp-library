@@ -13,28 +13,26 @@
 
 using namespace std;
 
-typedef long long ll;
-typedef unsigned long long ull;
-typedef pair<long long, long long> PLL;
-typedef pair<int, int> PII;
-
 const int MOD = 1000000007;
 
 // solve(): solves an individual test case
-void solve() {
+void solve() 
+{
 }
 
-int main() {
-    // fastio;
-    // #ifndef ONLINE_JUDGE
-    // 	freopen("input.txt", "r", stdin);
-    // 	freopen("output.txt", "w", stdout);
-    // #endif
+int main() 
+{
+    fastio;
+    #ifndef ONLINE_JUDGE
+        freopen("input.txt", "r", stdin);
+        freopen("output.txt", "w", stdout);
+    #endif
 
     int t = 1;
     // multiple test cases:
-    // cin >> t;
-    while (t--) {
+    cin >> t;
+    while (t--) 
+    {
         solve();
     }
 
