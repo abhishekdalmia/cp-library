@@ -5,6 +5,12 @@
 #define gcd(a, b) __gcd((a), (b))
 #define lcm(a, b) a / gcd(a, b) * (b)
 
+#ifdef DEBUG
+#define dbg cout
+#else
+#define dbg if(false) cout
+#endif
+
 const int MOD = (int)1e9 + 7;
 
 using namespace std;
