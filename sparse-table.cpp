@@ -1,7 +1,3 @@
-#include <bits/stdc++.h>
-
-using namespace std;
-
 template <typename T, class F = function<T(const T &, const T &)>>
 class SparseTable 
 {

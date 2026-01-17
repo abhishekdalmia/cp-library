@@ -14,18 +14,16 @@ FILE* f1 = freopen("input.txt", "r", stdin);
 FILE* f2 = freopen("output.txt", "w", stdout);
 #endif
 
-void solve()
-{
-	cout << "helloworld\n";
+void solve() {
+  cout << "helloworld\n";
+  return;
 }
 
-int main()
-{
-	fastio;
-	int t = 1;
-	//cin >> t;
-	while (t--)
-	{
-		solve();
-	}
+int main() {
+  fastio;
+  int t = 1;
+  // cin >> t;
+  while (t--) {
+    solve();
+  }
 }
